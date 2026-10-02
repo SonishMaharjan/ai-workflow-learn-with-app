@@ -1,0 +1,17 @@
+---
+description: How to add or edit learning topics, lessons and interview questions
+globs: src/data/**/*.ts
+alwaysApply: false
+---
+
+# Content rules
+- Each Topic needs: id (short, unique), icon, title, short, why, steps[], questions[].
+- A Step has: title, body (HTML: <p>, <ul>, <table>, <code>, <div class="callout">), optional code, optional prompt.
+- `prompt` = a realistic prompt the learner pastes into Cursor to practise the step.
+- A Question has: q, lvl (1 basic | 2 mid | 3 senior), points (4-6 key points), a (model answer, 60-90 seconds spoken, first person).
+- Append new questions at the end (ids are index-based and stored in localStorage).
+- Register new topic arrays in src/data/index.ts and, if useful, in ROADMAP.
+- Keep code examples short (< 35 lines) and correct for current library versions.
+
+## Example
+See src/data/topics/aws.ts for the reference format.
